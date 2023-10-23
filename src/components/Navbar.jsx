@@ -1,10 +1,33 @@
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaLightbulb } from "react-icons/fa";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import Dropdown from "./Dropdown";
 
 function Navbar({ user }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY === 0 ? false : true);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ">
+      <header
+        className={
+          isScrolled
+            ? "fixed w-full z-30 bg-white transition duration-300 ease-in-out dark:bg-black"
+            : "fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out "
+        }
+      >
         <div className="max-w-6xl mx-auto px-5 sm:px-6">
           <div className="flex items-center justify-between h-16 md:h-20">
             <div className="shrink-0 mr-4">
@@ -43,37 +66,22 @@ function Navbar({ user }) {
                 <ul className="flex grow justify-end flex-wrap items-center">
                   <li>
                     <Link
-                      href="#"
-                      className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                      href="/home"
+                      className="font-medium text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-gray-400 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                     >
                       Cursos
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                      href="/foro"
+                      className="font-medium text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-gray-400 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                     >
                       Foro
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="#"
-                      className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                    >
-                      Perfil
-                    </Link>
-                  </li>
-                  <li>
-                    <button className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">
-                      Logout
-                    </button>
-                  </li>
-                  <li>
-                    <FaLightbulb className="ml-4 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">
-                      Logout
-                    </FaLightbulb>
+                    <Dropdown></Dropdown>
                   </li>
                 </ul>
               </nav>
@@ -126,7 +134,6 @@ function Navbar({ user }) {
                   <rect y="18" width="24" height="2"></rect>
                 </svg>
               </button>
-              <div></div>
             </div>
           </div>
         </div>

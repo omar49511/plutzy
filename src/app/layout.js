@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar user={user} />
-        {children}
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="py-6">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>
