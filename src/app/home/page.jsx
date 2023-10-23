@@ -18,7 +18,7 @@ export default function HomePage() {
         <Carousel enlaces={enlaces} />
       </div>
       <div className="max-w-5xl w-full  m-auto  py-16 pt-40">
-        <h1 className="text-center text-3xl font-bold text-gray-700">
+        <h1 className="text-center text-3xl font-bold text-gray-700 dark:text-white">
           Últimos cursos
         </h1>
         <hr className="my-4" />

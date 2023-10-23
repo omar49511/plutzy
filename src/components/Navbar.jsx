@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { FaLightbulb } from "react-icons/fa";
-import { RiArrowDropDownLine } from "react-icons/ri";
+// import Image from "next/image";
+// import { FaLightbulb } from "react-icons/fa";
+// import { RiArrowDropDownLine } from "react-icons/ri";
 import Dropdown from "./Dropdown";
 
 function Navbar({ user }) {
@@ -91,7 +91,7 @@ function Navbar({ user }) {
                   <li>
                     <Link
                       href="/signin"
-                      className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                      className="font-medium text-gray-600 hover:text-gray-900 dark:hover:text-gray-400 dark:text-white px-5 py-3 flex items-center transition duration-150 ease-in-out"
                     >
                       Iniciar sesión
                     </Link>
@@ -103,7 +103,7 @@ function Navbar({ user }) {
                     >
                       <span>Regístrate</span>
                       <svg
-                        className="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1"
+                        className="w-3 h-3 fill-current text-white shrink-0 ml-2 -mr-1"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
