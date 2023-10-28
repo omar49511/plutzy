@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "Curso" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "img" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "description" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

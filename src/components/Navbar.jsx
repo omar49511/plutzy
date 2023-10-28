@@ -125,7 +125,7 @@ function Navbar({ user }) {
               >
                 <span className="sr-only">Menu</span>
                 <svg
-                  className="w-6 h-6 fill-current text-gray-900"
+                  className="w-6 h-6 fill-current text-gray-900 dark:text-white"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >

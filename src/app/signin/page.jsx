@@ -17,7 +17,7 @@ export default function SigninPage() {
             tabIndex="0"
             className="focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500"
           >
-            ¿No tienes una cuenta?{" "}
+            ¿No tienes una cuenta?
             <Link
               href="/signup"
               className="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none text-gray-800 cursor-pointer"
@@ -35,6 +35,7 @@ export default function SigninPage() {
               width={30}
               src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in-svg2.svg"
               alt="google"
+              className="rounded-full object-cover w-8 h-8"
             />
             <p className="text-base font-medium ml-4 text-gray-700">
               Continuar con Google
@@ -50,6 +51,7 @@ export default function SigninPage() {
               width={30}
               src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in-svg3.svg"
               alt="github"
+              className="rounded-full object-cover w-8 h-8"
             />
             <p className="text-base font-medium ml-4 text-gray-700">
               Continuar con Github
@@ -60,12 +62,11 @@ export default function SigninPage() {
             role="button"
             className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"
           >
-            <Image
-              width={30}
-              height={30}
-              src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png"
-              alt="twitter"
-            />
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="w-8 h-8">
+              <g>
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </g>
+            </svg>
             <p className="text-base font-medium ml-4 text-gray-700">
               Continuar con Twitter
             </p>
