@@ -2,18 +2,18 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/libs/prisma";
 
 export async function GET(request, { params }) {
-  const curso = await prisma.curso.findUnique({
+  const course = await prisma.course.findUnique({
     where: {
       id: Number(params.coursesId),
     },
   });
 
-  return NextResponse.json(curso);
+  return NextResponse.json(course);
 }
 
 export async function PUT(request, { params }) {
   const data = await request.json();
-  const taskUpdated = await prisma.curso.update({
+  const taskUpdated = await prisma.course.update({
     where: {
       id: Number(params.coursesId),
     },
@@ -23,7 +23,7 @@ export async function PUT(request, { params }) {
 }
 
 export function DELETE(request, { params }) {
-  const taskDeleted = prisma.curso.delete({
+  const taskDeleted = prisma.course.delete({
     where: {
       id: Number(params.coursesId),
     },

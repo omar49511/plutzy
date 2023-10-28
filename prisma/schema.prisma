@@ -10,10 +10,35 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Curso {
-  id Int @id @default(autoincrement())
-  title String
+model Course {
+  id          Int      @id @default(autoincrement())
+  title       String
   description String?
-  img String?
+  img         String?
+  createdAt   DateTime @default(now())
+}
+
+model Post {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String
+  autor     String    @default("Alejandro")
+  comments  Comment[]
+  tags      Tag[]
+  createdAt DateTime  @default(now())
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  content   String
   createdAt DateTime @default(now())
+  Post      Post?    @relation(fields: [postId], references: [id])
+  postId    Int?
+}
+
+model Tag {
+  id      Int    @id @default(autoincrement())
+  tagName String
+  Post    Post?  @relation(fields: [postId], references: [id])
+  postId  Int?
 }
