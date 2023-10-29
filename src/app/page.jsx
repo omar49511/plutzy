@@ -1,22 +1,8 @@
 import BackgroundRadialLeft from "@/components/BackgroundRadialLeft/BackgroundRadialLeft";
 import BackgroundRadialRight from "@/components/BackgroundRadialRight/BackgroundRadialRight";
-
-import CardPrice from "@/components/Cards/CardPrice";
+import Link from "next/link";
 
 export default function page() {
-  const data = [
-    {
-      title: "Gratis",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      price: "$0.00 ",
-    },
-    {
-      title: "Premium",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      price: "$99",
-    },
-  ];
-
   return (
     <>
       <BackgroundRadialRight />
@@ -39,29 +25,6 @@ export default function page() {
             <video className="rounded-lg" autoPlay loop muted>
               <source src="/136268.mp4" type="video/mp4"></source>
             </video>
-          </div>
-        </div>
-      </section>
-      <section className=" h-screen bg-purple-500 flex items-center snap-proximity snap-y">
-        <div className="max-w-5xl mx-auto flex items-center bg-indigo-500 snap-center">
-          <div>
-            <h1 className="text-[50px]">Pecios</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              incidunt officiis dolor aliquam iusto nihil. Fugiat a aperiam
-              voluptas sapiente, ipsum aut autem dolores numquam tempora rerum
-              asperiores ab similique pariatur cumque iste!
-            </p>
-          </div>
-          <div className="flex gap-4">
-            {data.map((d, index) => (
-              <CardPrice
-                key={d.title + index}
-                title={d.title}
-                price={d.price}
-                description={d.description}
-              />
-            ))}
           </div>
         </div>
       </section>
