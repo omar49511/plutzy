@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-spanish",
+        "dsznajder.es7-react-js-snippets",
+        "prisma.prisma",
+        "rangav.vscode-thunder-client",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "usernamehw.errorlens",
+        "vivaxy.vscode-conventional-commits",
+    ]
+}
