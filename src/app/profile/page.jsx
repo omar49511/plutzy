@@ -1,7 +1,21 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { BiCamera } from "react-icons/bi";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 export default function Profilepage() {
+  const [selectedTab, setSelectedTab] = useState(0);
+  const renderTabContent = () => {
+    if (selectedTab === 0) {
+      return <ContentTabGroup />;
+    } else if (selectedTab === 1) {
+      return <ContentTabGroup2 />;
+    } else if (selectedTab === 2) {
+      return <ContentTabGroup3 />;
+    }
+  };
   return (
     <div className="max-w-5xl h-[780px] w-full  m-auto  py-16 pt-20">
       <div className="rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3  bg-cover bg-no-repeat bg-[url('https://images.unsplash.com/photo-1578836537282-3171d77f8632?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')]">
@@ -104,34 +118,106 @@ export default function Profilepage() {
             </div>
           </div>
           <hr className="w-full h-px border-neutral-200" />
-          <ul className="group flex flex-wrap items-stretch text-[1.15rem] font-semibold list-none border-b-2 border-transparent border-solid active-assignments">
-            <li className="flex mt-2 -mb-[2px]">
-              <a
-                className="py-5 mr-1 sm:mr-3 lg:mr-10 transition-colors duration-200 ease-in-out border-b-2 border-transparent group-[.active-summary]:border-primary group-[.active-summary]:text-primary text-muted hover:border-primary"
-                href="#"
-              >
-                Cursos
-              </a>
+
+          <ul className="flex gap-8 mt-10">
+            <li
+              className="relative cursor-pointer  "
+              onClick={() => {
+                setSelectedTab(0);
+              }}
+            >
+              Cursos
+              {0 === selectedTab ? (
+                <motion.div
+                  className="absolute -bottom-[7px] left-0 right-0 h-[2px] bg-[#00668C]"
+                  layoutId="underline"
+                />
+              ) : null}
             </li>
-            <li className="flex mt-2 -mb-[2px]">
-              <a
-                className="py-5 mr-1 sm:mr-3 lg:mr-10 transition-colors duration-200 ease-in-out border-b-2 border-transparent group-[.active-assignments]:border-primary group-[.active-assignments]:text-primary text-muted hover:border-primary"
-                href="#"
-              >
-                Post
-              </a>
+            <li
+              className="relative cursor-pointer "
+              onClick={() => {
+                setSelectedTab(1);
+              }}
+            >
+              Post
+              {1 === selectedTab ? (
+                <motion.div
+                  className="absolute -bottom-[7px] left-0 right-0 h-[2px] bg-[#00668C]"
+                  layoutId="underline"
+                />
+              ) : null}
             </li>
-            <li className="flex mt-2 -mb-[2px] group">
-              <a
-                className="py-5 mr-1 sm:mr-3 lg:mr-10 transition-colors duration-200 ease-in-out border-b-2 border-transparent group-[.active-history]:border-primary group-[.active-history]:text-primary text-muted hover:border-primary"
-                href="#"
-              >
-                Historial
-              </a>
+            <li
+              className="relative cursor-pointer "
+              onClick={() => {
+                setSelectedTab(2);
+              }}
+            >
+              Historial
+              {2 === selectedTab ? (
+                <motion.div
+                  className="absolute -bottom-[7px] left-0 right-0 h-[2px] bg-[#00668C]"
+                  layoutId="underline"
+                />
+              ) : null}
             </li>
           </ul>
+
+          <main>
+            <AnimatePresence mode="wait">
+              <motion.div
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {renderTabContent()}
+              </motion.div>
+            </AnimatePresence>
+          </main>
         </div>
       </div>
     </div>
+  );
+}
+
+function ContentTabGroup() {
+  return (
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="bg-slate-600 mt-10"
+    >
+      primer tab
+    </motion.div>
+  );
+}
+function ContentTabGroup2() {
+  return (
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="bg-slate-600 mt-10"
+    >
+      hola
+    </motion.div>
+  );
+}
+function ContentTabGroup3() {
+  return (
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="bg-slate-600 mt-10"
+    >
+      tercer tab
+    </motion.div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Thumbnail({ data }) {
   return (
@@ -19,6 +20,9 @@ export default function Thumbnail({ data }) {
           </h2>
           <p className="text-gray-600">{data.description}</p>
         </div>
+        <Link className="px-4 py-2 bg-blue-500" href="/course/clases/">
+          Entrar
+        </Link>
       </div>
     </>
   );

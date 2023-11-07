@@ -24,7 +24,7 @@ function Navbar({ user }) {
       <header
         className={
           isScrolled
-            ? "fixed w-full z-30 bg-white transition duration-300 ease-in-out dark:bg-black"
+            ? "fixed w-full z-30 bg-[#71C4EF] transition duration-300 ease-in-out dark:bg-black"
             : "fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out "
         }
       >

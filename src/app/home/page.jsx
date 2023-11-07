@@ -14,7 +14,6 @@ export default async function HomePage() {
   return (
     <>
       <div className="max-w-5xl h-[780px] w-full  m-auto  py-16 pt-20">
-        {}
         <Carousel enlaces={images} />
       </div>
       <div className="max-w-5xl w-full m-auto">
