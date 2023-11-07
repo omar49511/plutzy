@@ -14,8 +14,26 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       gridTemplateColumns: {
-        // Simple 16 column grid
         column: "repeat(auto-fill, minmax(200px, 1fr))",
+      },
+      animation: {
+        marquee: "move_rtl 6s linear infinite",
+        slide_fwd_top:
+          "slide_fwd_top 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
+      },
+      keyframes: {
+        move_rtl: {
+          "75%": { transform: "translate(-300%)" },
+          "75.01%": { transform: "translate(100%)" },
+        },
+        slide_fwd_top: {
+          "0%": {
+            transform: "translateZ(0) translateY(0)",
+          },
+          "100%": {
+            transform: "translateZ(160px) translateY(-100px)",
+          },
+        },
       },
     },
   },
