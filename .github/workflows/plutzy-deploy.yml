@@ -1,16 +1,25 @@
-name: plutzy deploy
+name: Deploy to Production
+
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        run: npm i
-      - name: Run Eslint
-        run: npm run ci:lint
-      - name: Bundle
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
         run: npm run build
