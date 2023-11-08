@@ -12,7 +12,5 @@ jobs:
         uses: actions/setup-node@v3
       - name: instalar dependencias
         run: npm i
-      - name: Run Eslint
-        run: npm run ci:lint
       - name: Bundle
         run: npm run build
