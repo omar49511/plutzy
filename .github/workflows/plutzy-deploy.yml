@@ -10,8 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: no se que
         uses: actions/setup-node@v2
-      - name: instalar dependencias
-        run: npm i
+
       - name: Run Eslint
         run: npm run ci:lint
       - name: Bundle
