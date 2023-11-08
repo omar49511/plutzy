@@ -6,11 +6,13 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: no se que
+      - name: Setup Node
         uses: actions/setup-node@v3
-      - name: instalar dependencias
+      - name: Install dependencies
         run: npm i
+      - name: Run Eslint
+        run: npm run ci:lint
       - name: Bundle
         run: npm run build
