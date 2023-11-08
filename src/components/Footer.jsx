@@ -34,7 +34,7 @@ export default function Footer() {
           </svg>
         </a>
         <p className="mt-5 text-center text-sm leading-6 text-slate-500">
-          © 2023 Plutzy creado por omar && alejandro.
+          © 2023 Plutzy creado por Omar && Alejandro.
         </p>
       </div>
     </footer>
