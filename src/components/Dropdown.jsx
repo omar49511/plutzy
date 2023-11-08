@@ -4,11 +4,12 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { TbLogout, TbUserCircle } from "react-icons/tb";
+import { TbLogout, TbUserCircle, TbSettings } from "react-icons/tb";
 
 const icons = {
   salida: <TbLogout />,
   usuario: <TbUserCircle />,
+  ajustes: <TbSettings />,
 };
 export default function Dropdown() {
   const [open, setOpen] = useState(false);
@@ -57,6 +58,9 @@ export default function Dropdown() {
         <ul>
           <DropdownItem icon={icons.usuario} href="/profile">
             Mi perfil
+          </DropdownItem>
+          <DropdownItem icon={icons.ajustes} href="/settings">
+            Ajustes
           </DropdownItem>
           <DropdownItem icon={icons.salida} href="/logout">
             Cerrar sesión

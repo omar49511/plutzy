@@ -2,5 +2,6 @@
     "conventionalCommits.scopes": [
         "front",
         "database"
-    ]
+    ],
+    "cSpell.language": "en,es-ES"
 }
