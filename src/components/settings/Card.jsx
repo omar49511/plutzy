@@ -8,7 +8,7 @@ import {
 import { TbBusinessplan } from "react-icons/tb";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { PiBellSimpleRingingBold, PiListDashesBold } from "react-icons/pi";
-import Button from "./button";
+import Button from "./Button";
 
 export default function Card() {
   const dataAccount = [
