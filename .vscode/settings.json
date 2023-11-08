@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "front",
-        "database"
+        "database",
+        "back"
     ]
 }
