@@ -20,7 +20,7 @@ export default function Card() {
     {
       icon: <MdOutlineModeEdit />,
       text: "Editar perfil",
-      link: "/settings",
+      link: "/settings/profile",
     },
   ];
 
