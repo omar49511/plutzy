@@ -1,10 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CreatePost() {
   return (
     <div>
-      <div className="bg-gray-100 dark:bg-[#27272a] flex items-center gap-4 p-4 rounded-lg border border-[#3f3f46] mb-5">
+      <Link
+        href={"/foro/submit"}
+        className="bg-neutral-100 border border-neutral-300 dark:bg-[#27272a] flex items-center gap-4 p-4 rounded-lg mb-5 cursor-default"
+      >
         <Image
           src="https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?cs=srgb&dl=pexels-ali-pazani-2787341.jpg&fm=jpg"
           height={40}
@@ -19,11 +23,11 @@ export default function CreatePost() {
               name="createPost"
               id=""
               placeholder="Create Post"
-              className="text-black dark:text-white w-full rounded outline outline-[#3f3f46] hover:outline-[#9ca3af] hover:outline-2 focus:border-none focus:outline-none p-2 dark:bg-[#3f3f46]"
+              className="text-black dark:text-white w-full rounded outline outline-2 hover:outline-[#3f3f46] outline-[#9ca3af] focus:border-none focus:outline-none p-2 dark:bg-[#3f3f46]"
             />
           </form>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
