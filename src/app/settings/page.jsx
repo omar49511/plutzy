@@ -5,7 +5,7 @@ import Card from "@/components/settings/Card";
 
 export default function Setting() {
   return (
-    <div className="max-w-5xl h-[780px] w-full m-auto  py-16 pt-20">
+    <div className="max-w-5xl w-full m-auto py-16 pt-20">
       <Card />
     </div>
   );
