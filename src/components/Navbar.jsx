@@ -90,7 +90,7 @@ function Navbar({ user }) {
                 <ul className="flex grow justify-end flex-wrap items-center">
                   <li>
                     <Link
-                      href="/signin"
+                      href="/auth/login"
                       className="font-medium text-gray-600 hover:text-gray-900 dark:hover:text-gray-400 dark:text-white px-5 py-3 flex items-center transition duration-150 ease-in-out"
                     >
                       Iniciar sesión
@@ -99,7 +99,7 @@ function Navbar({ user }) {
                   <li>
                     <Link
                       className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
-                      href="/signup"
+                      href="/auth/register"
                     >
                       <span>Regístrate</span>
                       <svg

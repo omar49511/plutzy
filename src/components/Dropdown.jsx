@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TbLogout, TbUserCircle } from "react-icons/tb";
+import { signOut } from "next-auth/react";
 
 const icons = {
   salida: <TbLogout />,
@@ -58,9 +59,15 @@ export default function Dropdown() {
           <DropdownItem icon={icons.usuario} href="/profile">
             Mi perfil
           </DropdownItem>
-          <DropdownItem icon={icons.salida} href="/logout">
-            Cerrar sesión
-          </DropdownItem>
+          <li className="py-2.5 border-t border-[#0000000d] dark:border-[#ffffff0d]">
+            <button
+              className="flex  items-center gap-2"
+              onClick={() => signOut()}
+            >
+              {icons.salida}
+              Cerrar sesión
+            </button>
+          </li>
         </ul>
       </div>
     </div>

@@ -24,7 +24,7 @@ const catamaran = Catamaran({
 });
 
 export default function RootLayout({ children }) {
-  const user = true;
+  const user = false;
   return (
     <html lang="en">
       <body className={inter.className}>

@@ -10,14 +10,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model User {
   id Int @id @default(autoincrement())
   email String @unique
   username String @unique
   password String
+  profile    Profile?
+  posts   Post[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Profile {
+  id         Int     @id @default(autoincrement())
+  image      String  @default("foto_perfil.webp")
+  coverPhoto String  @default("cover_perfil.png")
+  userId     Int     @unique
+  user       User    @relation(fields: [userId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 }
 
 model Course {
@@ -32,9 +43,10 @@ model Post {
   id        Int       @id @default(autoincrement())
   title     String
   content   String
-  autor     String    @default("Alejandro")
   comments  Comment[]
   tags      Tag[]
+  user     User?       @relation(fields: [userId], references: [id])
+  userId   Int
   createdAt DateTime  @default(now())
 }
 
