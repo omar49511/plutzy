@@ -1,10 +1,11 @@
 import Title from "@/components/Title";
+import TextBox from "@/components/Forum/TextBox";
 import Link from "next/link";
 import React from "react";
 
 export default function SubmitPost() {
   return (
-    <div className="max-w-5xl h-[780px] w-full m-auto py-16 pt-20">
+    <div className="max-w-5xl w-full m-auto pt-24">
       <Title Title={"Crear una publicación"} />
       <div className="bg-neutral-100 border border-neutral-300 rounded-lg">
         <form action="">
@@ -19,14 +20,13 @@ export default function SubmitPost() {
               />
             </div>
             <div className="px-4 pb-2 pt-2">
-              <textarea
-                name=""
-                id=""
+              <TextBox
+                name="description"
+                id="idDescription"
                 cols="30"
                 rows="10"
-                className="outline outline-2 outline-neutral-400 p-2 w-full rounded"
                 placeholder="Write a description..."
-              ></textarea>
+              />
             </div>
             <div className="flex justify-end px-4 pb-4 pt-2">
               <Link
