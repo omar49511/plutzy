@@ -27,7 +27,7 @@ export default async function page() {
   const posts = await loadPost();
 
   return (
-    <div className="max-w-5xl h-[780px] w-full m-auto py-16 pt-20">
+    <div className="max-w-5xl w-full m-auto pt-24">
       <Title Title={"Publicaciones recientes"} />
       <button className="bg-gradient-to-r from-blue-500 to-teal-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex justify-center items-center mb-4">
         <FaFilter className="mr-2" /> filtrar
