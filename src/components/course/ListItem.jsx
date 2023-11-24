@@ -11,9 +11,10 @@ export default function ListItem() {
       </div>
       <div>
         <ul>
-          <ListContent Subtema={"Hola mundo"} />
-          <ListContent Subtema={"Hola mundo"} />
-          <ListContent Subtema={"Hola mundo"} />
+          <ListContent Subtema={"Primera version"} />
+          <ListContent Subtema={"Segunda version"} />
+          <ListContent Subtema={"Probable final"} />
+          <ListContent Subtema={"Descartes"} />
         </ul>
       </div>
     </li>

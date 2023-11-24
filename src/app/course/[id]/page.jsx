@@ -11,24 +11,19 @@ export default function page() {
       <Title Title="Contenido del curso" />
       <div className=" flex justify-between">
         <div className="max-w-[800px]">
-          <h1 className="text-3xl pb-6">
-            Introducción a la Programación con Python
-          </h1>
+          <h1 className="text-3xl pb-6">Versiones anteriores</h1>
           <p>
-            Si quieres aprender a programar, quieres pulir tus habilidades o
-            solo quieres mejorar tu salario, Python es tu opción. Python es el
-            lenguaje de programación más popular en todo el mundo. Con salarios
-            que superan los 100 mil dólares al año!
+            Esto solo es una prueba que muestra las versiones anteriores a esta
+            pagina. En esta parte se podrá apreciar como fue cambiando la pagina
+            conforme iva avanzando su desarrollo.
           </p>
           <p className="p-2">
             Creado por{" "}
-            <a className="text-blue-300" href="">
-              Hola Mundo
+            <a className="text-blue-300" href="https://github.com/LXMRPDLL">
+              lxmrpdll
             </a>
           </p>
           <h2 className="text-2xl pt-6">Temario</h2>
-          <List />
-          <List />
           <List />
         </div>
         <div className="w-[400px] max-h-[400px] bg-neutral-100 border border-neutral-300 rounded-lg">

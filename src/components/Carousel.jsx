@@ -18,7 +18,7 @@ export default function Carousel({ enlaces }) {
   return (
     <>
       <div
-        style={{ backgroundImage: `url(${enlaces[currentIndex]})` }}
+        style={{ backgroundImage: `url(${enlaces[currentIndex].img})` }}
         className="w-full h-full rounded-lg bg-center bg-cover relative"
       >
         <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5  rounded-full p-2 bg-black text-white">
