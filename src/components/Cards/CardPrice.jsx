@@ -50,7 +50,7 @@ export default function CardPrice(props) {
             </div>
           </div>
           <div className="flex gap-4 w-[500px] h-[350px] absolute top-4 -right-[248px] -z-10 drop-shadow-xl">
-            <div className="rounded-r-lg w-[16.25rem] px-[10px] py-[20px] my-[10px] text-center flex justify-around flex-col items-center cursor-pointer bg-[#71C4EF]">
+            <div className="rounded-r-lg w-[16.25rem] px-[10px] py-[20px] my-[10px] text-center flex justify-around flex-col items-center cursor-pointer bg-[#1F1D2E]">
               <div className="p-[20px]">
                 <div className="font-extrabold uppercase text-[#ffffffa3] text-2xl mt-[.625rem] tracking-wide">
                   Premium
@@ -58,7 +58,7 @@ export default function CardPrice(props) {
                 <div className="text-white font-extrabold text-[50px] drop-shadow-2xl">
                   $ 95.00
                 </div>
-                <div className="text-[rgba(27,27,27,0.6)] mt-[10px] text-[14px]">
+                <div className="text-[rgba(209,209,209,0.6)] mt-[10px] text-[14px]">
                   <p className=" whitespace-nowrap">
                     - Acceso a videos gratuitos
                   </p>

@@ -14,7 +14,7 @@ export default async function page({ params }) {
 
   return (
     <div className="max-w-5xl w-full m-auto pt-24">
-      <div className="bg-neutral-100 border border-neutral-300 rounded-lg">
+      <div className="bg-neutral-100 border border-neutral-300 rounded-lg dark:bg-[#27272a]">
         <div className="">
           <div className="px-4 pt-4 pb-2">
             <p className="flex gap-1 text-sm text-neutral-500">
@@ -68,7 +68,7 @@ export default async function page({ params }) {
         </div>
       </div>
       <Subtitle Title={"Comentarios"} />
-      <div className="bg-neutral-100 border border-neutral-300 rounded-lg pb-4">
+      <div className="bg-neutral-100 border border-neutral-300 rounded-lg pb-4 dark:bg-[#27272a]">
         <Coment />
         <Coment />
         <Coment />

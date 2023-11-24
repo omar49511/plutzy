@@ -7,7 +7,7 @@ export default function SubmitPost() {
   return (
     <div className="max-w-5xl w-full m-auto pt-24">
       <Title Title={"Crear una publicación"} />
-      <div className="bg-neutral-100 border border-neutral-300 rounded-lg">
+      <div className="bg-neutral-100 border border-neutral-300 rounded-lg dark:bg-[#27272a]">
         <form action="">
           <div className="flex flex-col">
             <div className="px-4 pb-2 pt-4">
@@ -15,7 +15,7 @@ export default function SubmitPost() {
                 id=""
                 name=""
                 type="text"
-                className="outline outline-2 outline-neutral-400 p-2 w-full rounded"
+                className="outline outline-2 outline-neutral-400 p-2 w-full rounded dark:bg-[#27272a]"
                 placeholder="Title"
               />
             </div>
@@ -31,7 +31,7 @@ export default function SubmitPost() {
             <div className="flex justify-end px-4 pb-4 pt-2">
               <Link
                 href={"/foro"}
-                className="h-10 w-24 bg-neutral-50 hover:bg-sky-50 border border-sky-600 p-2 mr-4 rounded text-center text-sky-600"
+                className="h-10 w-24 bg-neutral-50 hover:bg-sky-50 border border-sky-600 p-2 mr-4 rounded text-center text-sky-600 dark:bg-transparent"
               >
                 Cancelar
               </Link>
