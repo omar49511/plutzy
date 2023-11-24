@@ -21,10 +21,10 @@ export default function Page() {
 
       `)} */}
       <Hero />
-      <section className="bg-[#71C4EF] mt-20 py-10">
+      <section className="bg-[#1F1D2E] mt-20 py-10">
         <MarqueeSlider />
       </section>
-      <section className="bg-[#F6F7FC] pb-20 ">
+      <section className="bg-[#F6F7FC] pb-20 dark:bg-[#282638]">
         <Topic />
       </section>
       <CardPrice />

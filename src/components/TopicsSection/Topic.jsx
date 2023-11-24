@@ -52,7 +52,7 @@ export default function Topic() {
           // whileInView={}
           ref={ref}
           animate={isInView && "animate"}
-          className="bg-white rounded-lg flex p-5 drop-shadow-lg"
+          className="bg-white rounded-lg flex p-5 drop-shadow-lg dark:bg-[#1F1D2E]"
         >
           <div className="w-[20%]">
             <SiJavascript className="text-4xl  text-[#00668c]"></SiJavascript>
@@ -71,7 +71,7 @@ export default function Topic() {
           // whileInView={}
           ref={ref}
           animate={isInView && "animate2"}
-          className="bg-white rounded-lg flex p-5 drop-shadow-lg"
+          className="bg-white rounded-lg flex p-5 drop-shadow-lg dark:bg-[#1F1D2E]"
         >
           <div className="w-[20%]">
             <SiReact className="text-4xl text-[#00668c]"></SiReact>
@@ -90,7 +90,7 @@ export default function Topic() {
           // whileInView={}
           ref={ref}
           animate={isInView && "animate"}
-          className="bg-white rounded-lg flex p-5 drop-shadow-lg"
+          className="bg-white rounded-lg flex p-5 drop-shadow-lg dark:bg-[#1F1D2E]"
         >
           <div className="w-[20%]">
             <SiHtml5 className="text-4xl  text-[#00668c]"></SiHtml5>
@@ -109,7 +109,7 @@ export default function Topic() {
           // whileInView={}
           ref={ref}
           animate={isInView && "animate2"}
-          className="bg-white rounded-lg flex p-5 drop-shadow-lg"
+          className="bg-white rounded-lg flex p-5 drop-shadow-lg dark:bg-[#1F1D2E]"
         >
           <div className="w-[20%]">
             <SiCss3 className="text-4xl  text-[#00668c]"></SiCss3>
