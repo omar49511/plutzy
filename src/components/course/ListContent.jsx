@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ListContent({ Subtema }) {
   return (
     <li className="px-4 py-1 hover:bg-neutral-100">
-      <Link className="flex gap-2" href={""}>
+      <Link className="flex gap-2" href="/course/clase/video">
         <div className="flex items-center">
           <MdOndemandVideo />
         </div>

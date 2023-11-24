@@ -12,7 +12,7 @@ export default function Card({ title, content }) {
         <ContentProfile />
       </div>
       <div className="pb-3 bg-neutral-100 border border-neutral-300 rounded-lg">
-        <h1 className="p-3 text-lg">{title}</h1>
+        <h1 className="p-3 text-lg">{content}</h1>
         <ContentSettings />
       </div>
     </div>

@@ -28,7 +28,7 @@ export default function page() {
         </div>
         <div className="w-[400px] max-h-[400px] bg-neutral-100 border border-neutral-300 rounded-lg">
           <Image
-            src={"/hola-mundo.jpg"}
+            src={"/mini1.png"}
             alt="image"
             width={200}
             height={200}
@@ -40,13 +40,13 @@ export default function page() {
               <div className="flex items-center">
                 <MdLibraryBooks />
               </div>
-              <p>191 lecciones</p>
+              <p>#4 lecciones</p>
             </div>
             <div className="flex gap-2">
               <div className="flex items-center">
                 <MdOutlinePlayCircle />
               </div>
-              <p>horas de contenido de video</p>
+              <p>pocas horas de contenido de video</p>
             </div>
             <div className="flex flex-col gap-1 mt-4">
               <button className="bg-sky-600 hover:bg-sky-700 border border-sky-600 p-2 rounded text-center text-neutral-50">

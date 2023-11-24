@@ -21,7 +21,7 @@ export default function SettingsProfile() {
           <Card key={index} title={data.title} type={data.type} />
         ))} 
       </div> */}
-      <Card title={"Imagen de perfil"} />
+      <Card title={"Imagen de perfil"} content={"Ajustes"} />
     </div>
   );
 }
